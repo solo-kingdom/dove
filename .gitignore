@@ -1,0 +1,15 @@
+.DS_Store
+.idea
+venv
+.venv
+
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+
+# log
+*.log
+*.tmp
+log/*
