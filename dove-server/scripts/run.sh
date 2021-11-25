@@ -1,9 +1,4 @@
 #!/bin/sh
-# check config
-if [ -z "$DOVE_CONFIG" ]; then
-  exit 1
-fi
-
 # base config & source tools
 fp="$(
   cd "$(dirname "$0")" || exit
@@ -11,6 +6,12 @@ fp="$(
 )"
 cd "$fp/.." || exit
 base="$(pwd)"
-echo "$base"
+
+. "$base/scripts/common/tools.sh"
+
+# check config
+if [ -z "$DOVE_CONFIG" ]; then
+  quit "environment variable DOVE_CONFIG not set" 0
+fi
 
 python3 manage.py runserver 0.0.0.0:8000
