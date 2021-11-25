@@ -1,12 +1,13 @@
 #!/bin/sh
 # base config & source tools
 fp="$(
-  cd "$(dirname "$1")" || exit
+  cd "$(dirname "$0")" || exit
   pwd -P
-)/$(basename "$1")"
+)"
 cd "$fp/.." || exit
 base="$(pwd)"
-echo "$base"
+
+. "$base/scripts/common/tools.sh"
 
 python3 manage.py makemigrations
 python3 manage.py migrate
