@@ -1,0 +1,15 @@
+{
+  "database": {
+    "ENGINE": "django.db.backends.mysql",
+    "NAME": "dove",
+    "USER": "dove",
+    "PASSWORD": "dove",
+    "HOST": "127.0.0.1"
+  },
+  "log": {
+    "path": "logs",
+    "name": "dove.log",
+    "file_size_mb": "100",
+    "log_file_number": "30"
+  }
+}

@@ -1,0 +1,6 @@
+[submodule "py-common"]
+	path = py-common
+	url = git@github.com:solo-kingdom/py-common.git
+[submodule "sh-common"]
+	path = sh-common
+	url = git@github.com:solo-kingdom/sh-common.git
